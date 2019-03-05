@@ -1,0 +1,81 @@
+<div id="k_quick_panel" class="k-offcanvas-panel">
+    <div class="k-offcanvas-panel__nav">
+        <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item active"> <a class="nav-link active" data-toggle="tab" href="#k_quick_panel_tab_actions" role="tab">Acciones</a> </li>
+        </ul>
+        <button class="k-offcanvas-panel__close" id="k_quick_panel_close_btn"><i class="flaticon2-delete"></i></button>
+    </div>
+    <div class="k-offcanvas-panel__body">
+        <div class="tab-content">
+            <div class="tab-pane fade show k-offcanvas-panel__content k-scroll active" id="k_quick_panel_tab_actions" role="tabpanel">
+                <!--begin::Portlet-->
+                <div class="k-portlet k-portlet--solid-success">
+                    <div class="k-portlet__head">
+                        <div class="k-portlet__head-label">
+                            <span class="k-portlet__head-icon k-hide"><i class="flaticon-stopwatch"></i></span>
+                            <h3 class="k-portlet__head-title">
+                                Productos
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="k-section__content k-section__content--border">
+                        <div class="k-portlet__foot k-portlet__foot--sm k-align-right">
+                            <a class="btn btn-bold btn-upper btn-sm btn-font-light btn-outline-hover-light" data-toggle="collapse" href="#AgregarProducto" role="button" aria-expanded="true" aria-controls="collapseExample">Agregar </a> 
+                            <a class="btn btn-bold btn-upper btn-sm btn-font-light btn-outline-hover-light" role="button" href="#">Lista</a>
+                        </div>
+                        <div class="collapse" id="AgregarProducto" >
+                            <div class="card card-body">
+                                Form
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                <!--end::Portlet-->
+                <!--begin::Portlet-->
+                <div class="k-portlet k-portlet--solid-focus">
+                    <div class="k-portlet__head">
+                        <div class="k-portlet__head-label">
+                            <span class="k-portlet__head-icon k-hide"><i class="flaticon-stopwatch"></i></span>
+                            <h3 class="k-portlet__head-title">
+                                Modelos
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="k-section__content k-section__content--border">
+                        <div class="k-portlet__foot k-portlet__foot--sm k-align-right">
+                            <a class="btn btn-bold btn-upper btn-sm btn-font-light btn-outline-hover-light" data-toggle="collapse" href="#AgregarModelo" role="button" aria-expanded="true" aria-controls="collapseExample">Agregar </a> 
+                            <a class="btn btn-bold btn-upper btn-sm btn-font-light btn-outline-hover-light" role="button" href="{% url 'modelo' %}">Lista</a>
+                        </div>
+                        <div class="collapse" id="AgregarModelo">
+                            <div class="card card-body" id="modeloadd">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end::Portlet-->
+                <!--begin::Portlet-->
+                <div class="k-portlet k-portlet--solid-info">
+                    <div class="k-portlet__head">
+                        <div class="k-portlet__head-label">
+                            <span class="k-portlet__head-icon k-hide"><i class="flaticon-stopwatch"></i></span>
+                            <h3 class="k-portlet__head-title">
+                                Marca
+                            </h3>
+                        </div>
+                    </div>
+                    
+                    <div class="k-section__content k-section__content--border">
+                        <div class="k-portlet__foot k-portlet__foot--sm k-align-right">
+                            <a class="btn btn-bold btn-upper btn-sm btn-font-light btn-outline-hover-light" data-toggle="collapse" href="#AgregarMarca" role="button" aria-expanded="true" aria-controls="collapseExample">Agregar </a> 
+                            <a class="btn btn-bold btn-upper btn-sm btn-font-light btn-outline-hover-light" role="button" href="{% url 'marca' %}">Lista</a>
+                        </div>
+                        <div class="collapse" id="AgregarMarca">
+                            <div class="card card-body" id="marcaadd">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

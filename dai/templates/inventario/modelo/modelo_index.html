@@ -1,0 +1,40 @@
+{% extends 'base/_base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="k-portlet">
+    <div class="k-portlet__body">
+        <div class="k-section">
+            <div class="k-section__info">Listado de Modelos: </div>
+            <div class="k-section__content">
+                <button type="button" class="btn btn-focus btn-elevate btn-icon" data-toggle="modal" data-target="#exampleModal"><i class="la la-plus"></i></button>
+                <table class="table table-head-noborder">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Clave</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for modelo in object_list %}
+                        <tr>
+                            <td>{{ modelo.id }}</td>
+                            <td>{{ modelo.modelo_clave }}</td>
+                            <td>{{ modelo.modelo_nombre }}</td>
+                            <td>{{ modelo.modelo_descripcion }}</td>
+                            <td>
+                                <a href="{% url 'marcaupdate' modelo.id %}" class="btn btn-focus btn-elevate btn-icon"><i class="la la-edit"></i> </a>
+                                <a href="{% url 'marcadelete' modelo.id %}" class="btn btn-focus btn-icon"><i class="la la-eraser"></i> </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+            
+                </table>
+            </div>
+        </div>
+    </div>  
+</div>
+{% endblock %}
